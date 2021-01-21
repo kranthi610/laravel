@@ -12,7 +12,7 @@ RUN apt-get install -y nginx
 
 RUN apt-get install -y  curl
 
-ADD /home/kkumar/test_kranthi/ /var/www/html
+ADD /home/kkumar/test_kranthi /var/www/html
 
 RUN chown -R www-data:www-data /var/www/html
 
