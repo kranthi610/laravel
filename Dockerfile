@@ -20,6 +20,10 @@ ADD default.conf /etc/nginx/sites-enabled/default
 
 RUN apt-get install  php7.4 php7.4-fpm php7.4-cli php7.4-xml php7.4-gd php7.4-mysql php7.4-curl php7.4-mbstring zip unzip php7.4-zip -y
 
+RUN chmod -R 777 /var/www/html/bootstrap
+
+RUN chmod -R 777 /var/www/html/storage
+
 RUN curl -sS https://getcomposer.org/installer | php -- --install-dir=/usr/local/bin --filename=composer
 
 RUN composer update -d /var/www/html
