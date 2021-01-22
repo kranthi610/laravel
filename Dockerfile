@@ -28,7 +28,7 @@ RUN curl -sS https://getcomposer.org/installer | php -- --install-dir=/usr/local
 
 RUN composer update -d /var/www/html
 
-RUN cp /home/env/.env /var/www/html/.env
+ADD /home/env/.env /var/www/html
 
 RUN chmod -R 777 /var/www/html/storage
 
